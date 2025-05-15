@@ -1,0 +1,450 @@
+/* HOVER CSS ARE NOT ADDED YET */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  #11162c;
+    padding: 5px 20px;
+    gap: 15px;
+    color: white;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header button {
+    padding: 6px 12px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    overflow: hidden;
+    color:#11162c;
+}
+
+header button:hover {
+    background-color:  rgba(255, 123, 0, 0.856);
+    color: white;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 18px;
+    height: 50px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-weight: bold;
+}
+
+header a {
+    text-decoration: none;
+    color: #f5eded;
+}
+
+
+/* /// MAIN /// */
+main {
+    display: flex;
+    /* flex: 1; */
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.adminHeading2{
+    margin-bottom: 20px;
+}
+
+/* Side Bar */
+.sideBar {
+    width: 290px;
+    background-color:#160052;
+    color: #ecf0f1;
+    padding: 20px 0px;
+    flex-shrink: 0;
+    font-size: 20px;
+}
+
+.sideBar h4{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.sideBar a {
+    display: block;
+    color: #ecf0f1;
+    text-decoration: none;
+    margin: 10px 20px;
+    padding: 8px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.currentPage{
+    background-color: rgba(255, 123, 0, 0.856);
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* .sideBarBtn{
+    display: block;
+    width: 100%;
+    color: #ecf0f1;
+    background-color: transparent;
+    text-align: left;
+    text-decoration: none;
+    margin: 10px 20px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.currentPageBtn{
+    width: 90%;
+    background-color: rgba(255, 123, 0, 0.856);
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 8px;
+} */
+ 
+/* Content */
+.dashboardContent {
+    flex-grow: 1;
+    flex-shrink: 1;
+    /* flex-shrink: 0;  */
+    padding: 20px;
+}
+
+.breadcrumb {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 10px;
+}
+.breadcrumb a:hover {
+    color:  rgb(255, 94, 49);
+    text-decoration: underline;
+}
+
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    min-width: 200px;
+    width: calc(25% - 20px);
+}
+
+.card h5 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    /* color: #555; */
+}
+
+.card p {
+    font-size: 24px;
+    /* color: #333; */
+}
+
+.adminTodaySchedule {
+    background-color: #ffad1552;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.adminTodaySchedule h3 {
+    margin-bottom: 15px;
+}
+
+
+.todayActivityBox{
+    background-color: #fff3f3;
+    height: 60px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: #160052 0px 0px 5px;
+    padding:10px;
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+/*/////////////////////////////// Manage Classes & Sessions Page  ///////////////////////////////*/
+
+.content { 
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 20px;
+}
+
+.modal, .deleteConfirmationModal{
+    margin-left: 290px;
+    margin-top: 65px;
+    display: none; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px;
+    padding-left: 100px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+}
+
+.modalContent{
+    background-color: #fefefe;
+    padding: 20px;
+    margin: auto 150px 300px 150px;
+    border: 1px solid #949494;
+    width: 50%;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.modalContent h3, .modalEditContent h3, .modalDeleteContent h3{
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.modalLabelGrp{
+    margin-bottom: 20px;
+}
+.modalLabelGrp label {
+    display: block;
+    margin-bottom: 3px;
+    font-weight: bold;
+}
+.modalLabelGrp input[type="text"], .modalLabelGrp input[type="datetime-local"], 
+.modalLabelGrp input[type="number"], .modalLabelGrp select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.addActivityModal{ 
+    display: block;
+} 
+
+
+#addMemberModal{ 
+    display: none;
+}
+#addActivityBtn, #addMemberBtn{
+    padding: 8px 10px;
+    background-color: #160052 ;
+    color: rgba(255, 255, 255, 0.856);
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+#addActivityBtn:hover, #addMemberBtn:hover{
+    background-color:  rgba(255, 123, 0, 0.856);
+    color: white;
+    border: 1px solid rgba(255, 123, 0, 0.856);
+}
+
+.submitActBtn{
+    background-color: #160052 ;
+    color: white;
+    border: 1px solid #160052 ;
+}
+
+.submitEditBtn, .submitMemEditBtn{
+    background-color: rgb(30, 86, 0);
+    color: white;
+    border: 1px solid rgb(30, 86, 0);
+}
+
+.submitActBtn, .submitEditBtn, .submitDeleteBtn,
+.submitMemEditBtn{
+    padding: 8px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-top: 10px;    
+}
+
+.submitActBtn:hover{
+    background-color:rgba(255, 123, 0, 0.856);
+    color: white;
+    border: 1px solid rgba(255, 123, 0, 0.856);
+}
+
+.closeBtn, #editCloseBtn, #editMemberCloseBtn {
+    color: #16005295;
+    float: right; 
+    font-size: 30px;
+}
+.closeBtn:hover, .closeBtn:focus,
+#editCloseBtn:hover, #editCloseBtn:focus,
+#editMemberCloseBtn:hover, #editMemberCloseBtn:focus{
+    color: #160052;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal for update and delete */
+.modalEditContent, .modalDeleteContent{
+    background-color: #fefefe;
+    padding: 20px;
+    margin: auto 150px 300px 150px;
+    border: 1px solid #949494;
+    width: 35%;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.editBtn {
+    background-color: rgb(30, 86, 0);
+}
+
+.editBtn, .deleteBtn, .viewAttendanceBtn, .viewClassesBtn{
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-right: 0px;
+}
+
+.editBtn:hover, .deleteBtn:hover, .submitEditBtn:hover, .submitDeleteBtn:hover, 
+.viewAttendanceBtn:hover, .viewClassesBtn:hover{
+    opacity: 0.8;
+}
+
+.viewAttendanceBtn:hover, .viewClassesBtn:hover{
+    background-color: #160052;
+    color: white;
+    border: 1px solid #160052;
+}
+
+#editActivityModal {
+    display: none;
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modalDeleteContent p{
+    font-weight: bold;
+}
+
+.deleteBtn{
+    background-color: rgba(149, 6, 6, 0.99);
+}
+
+.submitDeleteBtn{
+    background-color: rgba(149, 6, 6, 0.99);
+    color: white;
+    border: 1px solid rgba(149, 6, 6, 0.99);
+}
+
+.viewAttendanceBtn, .viewClassesBtn{
+    background-color: rgba(255, 255, 255, 0.856);
+    color: #160052 ;
+    border: 1px solid #160052;
+    padding: 5px 10px;
+}
+
+/* Table styling */
+.scheduledActTable, .membersTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.scheduledActTable td,.attendanceActTable td, .membersTable td{
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.scheduledActTable th, .attendanceActTable th, .membersTable th{
+    border: 1px solid #ddd;
+    background-color: #160052;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.scheduledActTable button, .attendanceActTable button, .membersTable button{
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.attendanceActTable{
+    border-collapse: collapse;
+    margin-top: 20px;
+    width: 40%;
+}
+
+.attendanceBtn{
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    /* cursor: pointer; */
+    font-size: 0.9em;
+    margin-right: 0px;   
+    background-color:#160052;
+}
+
+.attendanceFrm{
+    display: inline;
+}
+
+/*adminReports.php WILL EDIT THIS LATER*/
+
+
+/* adminMembers.php */
+
